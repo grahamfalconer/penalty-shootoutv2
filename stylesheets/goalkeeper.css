@@ -29,14 +29,13 @@
   0% { top: 12vw; left: 42.5%; transform: rotate(0deg); }
   30% { top: 3vw; left: 31%; transform: rotate(-45deg); }
 }
+
 @keyframes jump-center {
   0% { top: 12vw; left: 42.5%; transform: rotate(0deg); }
   30% { top: 3vw; left: 42.5%; transform: rotate(0deg); }
-
 }
 
 @keyframes stay-center {
   0% { top: 12vw; left: 42.5%; transform: rotate(0deg); }
   30% { top: 11vw; left: 42.5%; transform: rotate(0deg); }
-
 }
