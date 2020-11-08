@@ -1,0 +1,52 @@
+/* Appearance */
+
+#football {
+  position: absolute;
+  width: 9vw;
+  top: 42.5vw;
+  left: 45vw;
+}
+
+/* Animations */
+
+@keyframes shoot-bottom-left {
+  0% { left: 45vw; top: 42.5vw; width: 9vw; transform: rotate(0deg);}
+  30% { left: 30vw; top: 21.5vw; width: 4vw; transform: rotate(-720deg);}
+  90% { left: 30vw; top: 21.5vw; width: 4vw; transform: rotate(-720deg);}
+}
+
+@keyframes shoot-bottom-right {
+  0% { left: 45vw; top: 42.5vw; width: 9vw; transform: rotate(0deg);}
+  30% { left: 65vw; top: 21.5vw; width: 4vw; transform: rotate(720deg);}
+  90% { left: 65vw; top: 21.5vw; width: 4vw; transform: rotate(720deg);}
+}
+
+@keyframes shoot-top-left {
+  0% { left: 45vw; top: 42.5vw; width: 9vw; transform: rotate(0deg);}
+  30% { left: 29vw; top: 9vw; width: 4vw; transform: rotate(-720deg);}
+  90% { left: 29vw; top: 9vw; width: 4vw; transform: rotate(-720deg);}
+}
+
+@keyframes shoot-top-right {
+  0% { left: 45vw; top: 42.5vw; width: 9vw; transform: rotate(0deg);}
+  30% { left: 65vw; top: 9vw; width: 4vw; transform: rotate(-720deg);}
+  90% { left: 65vw; top: 9vw; width: 4vw; transform: rotate(-720deg);}
+}
+
+@keyframes shoot-top-right {
+  0% { left: 45vw; top: 42.5vw; width: 9vw; transform: rotate(0deg);}
+  30% { left: 65vw; top: 9vw; width: 4vw; transform: rotate(-720deg);}
+  90% { left: 65vw; top: 9vw; width: 4vw; transform: rotate(-720deg);}
+}
+
+@keyframes shoot-top-center {
+  0% { left: 45vw; top: 42.5vw; width: 9vw; transform: rotate(0deg);}
+  30% { left: 42vw; top: 5.5vw; width: 4vw; transform: rotate(-720deg);}
+  90% { left: 42vw; top: 5.5vw; width: 4vw; transform: rotate(-720deg);}
+}
+
+@keyframes shoot-bottom-center {
+  0% { left: 45vw; top: 42.5vw; width: 9vw; transform: rotate(0deg);}
+  30% { left: 47vw; top: 16.5vw; width: 4vw; transform: rotate(-720deg);}
+  90% { left: 47vw; top: 16.5vw; width: 4vw; transform: rotate(-720deg);}
+}

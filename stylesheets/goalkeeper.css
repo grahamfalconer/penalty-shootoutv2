@@ -1,0 +1,42 @@
+/* Appearance */
+
+#goalkeeper {
+  position: absolute;
+  left: 42.5%;
+  top: 12vw;
+  height:15.5vw;
+  width: 12vw;
+}
+
+/* Animations */
+
+@keyframes dive-bottom-left {
+  0% { left: 42.5%; transform: rotate(0deg);}
+  30% { left: 31%; transform: rotate(-90deg); }
+}
+
+@keyframes dive-bottom-right {
+  0% { left: 42.5%; transform: rotate(0deg); }
+  30% { left: 54%; transform: rotate(90deg); }
+}
+
+@keyframes dive-top-right {
+  0% { top: 12vw; left: 42.5%; transform: rotate(0deg); }
+  30% { top: 3vw; left: 54%; transform: rotate(45deg); }
+}
+
+@keyframes dive-top-left {
+  0% { top: 12vw; left: 42.5%; transform: rotate(0deg); }
+  30% { top: 3vw; left: 31%; transform: rotate(-45deg); }
+}
+@keyframes jump-center {
+  0% { top: 12vw; left: 42.5%; transform: rotate(0deg); }
+  30% { top: 3vw; left: 42.5%; transform: rotate(0deg); }
+
+}
+
+@keyframes stay-center {
+  0% { top: 12vw; left: 42.5%; transform: rotate(0deg); }
+  30% { top: 11vw; left: 42.5%; transform: rotate(0deg); }
+
+}
