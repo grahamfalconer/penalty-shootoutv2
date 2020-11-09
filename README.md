@@ -10,5 +10,10 @@ How does goal keeper learn?
 • If you go to a certain corner, then he is more likely to go there?
 
 How to add to the game? 
-• If 
+• Having two teams that compete in a penalty shootout?
+• Having goal keepers of different difficulty levels?
+• How can one goalkeeper be more advanced than another goalkeeper?
+• Having levels? Level 1 ? Level 2 ? Level 3 ?
+• 
+
 

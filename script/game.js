@@ -1,3 +1,4 @@
+
 //Nodes
 
 var football = document.getElementById('football');
@@ -14,6 +15,7 @@ class Player {
 class Goalkeeper {
   constructor() {
     this.possibleMoves = ['dive-bottom-left', 'dive-bottom-right', 'dive-top-left', 'dive-top-right', 'jump-center', 'stay-center'];
+    this.amountOfAttempts = 0
   };
 
   returnRandomMove() {
@@ -26,15 +28,39 @@ class Goalkeeper {
     goalkeeperNode.setAttribute('style', 'animation-name: ' + goalkeepersMove + '; animation-duration: 2s;')
     return goalkeepersMove
   }
+
+  restoreToDefault = () => {
+    this.possibleMoves = ['dive-bottom-left', 'dive-bottom-right', 'dive-top-left', 'dive-top-right', 'jump-center', 'stay-center'];
+    this.amountOfAttempts = 0
+  }
 };
 
 // Initialize Characters
+
 gameGoalkeeper = new Goalkeeper()
 gamePlayer = new Player()
+moveObject = {
+  'shoot-top-left': 'dive-top-left',
+  'shoot-top-right': 'dive-top-right',
+  'shoot-bottom-left': 'dive-bottom-left',
+  'shoot-bottom-right': 'dive-bottom-right',
+  'shoot-top-center': 'jump-center',
+  'shoot-bottom-center': 'stay-center'
+}
 
 // Game Mechanics
 
 takeShot = (shotType) => {
+  if(gameGoalkeeper.amountOfAttempts < 6) {
+    gameGoalkeeper.possibleMoves.forEach((i) => {
+      gameGoalkeeper.possibleMoves.push(moveObject[shotType])
+    });
+    gameGoalkeeper.amountOfAttempts +=1
+  } else {
+    gameGoalkeeper.restoreToDefault()
+  };
+
+  console.log(gameGoalkeeper)
   football.setAttribute('style', 'animation-name: ' + shotType + '; animation-duration: 2s;');
 
   setTimeout(() => {
@@ -95,9 +121,9 @@ checkForGoal = (usersShot, goalkeepersMove) => {
   }
 };
 
+// Goal results
+
 goalConfirmed = () => {
-  gamePlayer.score +=1
-  console.log(gamePlayer)
   showGoalMessage()
 };
 
@@ -107,30 +133,33 @@ saveConfirmed = () => {
 
 showGoalMessage = () => {
   setTimeout(() => {
-    football.setAttribute('src', 'images/Goal.png')
+    football.setAttribute('src', 'images/Goal.png');
+
     setTimeout(() => {
-      football.style.opacity = 0
+      football.style.opacity = 0;
+
       setTimeout(() => {
         football.setAttribute('src', 'images/Football.png')
-        
       }, 200);
       
     }, 300);
 
-  }, 600);
-}
+  }, 600)
+};
 
 showSaveMessage = () => {
   setTimeout(() => {
-    football.setAttribute('src', 'images/Save.png')
+    football.setAttribute('src', 'images/Save.png');
+
     setTimeout(() => {
-      football.style.opacity = 0
+      football.style.opacity = 0;
+
       setTimeout(() => {
-        football.setAttribute('src', 'images/Football.png')
-        
+        football.setAttribute('src', 'images/Football.png');
       }, 200);
       
     }, 300);
 
-  }, 600);
-}
+  }, 600)
+};
+
