@@ -5,3 +5,10 @@ The game will work by having a grid which is located over the goal, the user wil
 After clicking on the grid square, the penalty taker will have their shot go to that location.
 There will be a goal keeper which attempts to save the shot by moving in a random direction.
 The goal keeper will learn the players moves as time goes on.
+
+How does goal keeper learn? 
+• If you go to a certain corner, then he is more likely to go there?
+
+How to add to the game? 
+• If 
+
